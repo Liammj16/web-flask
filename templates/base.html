@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <title>{% block title %}{% endblock %}</title>
+  <link rel="stylesheet" href="\static\stylesbase.css">   
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">    
+</head>
+    <body>
+      <header>
+        <a class="logo" href="/"><img class="logo" src="\static\images\Indie_nest_logo.png" width="10%" alt="logo"></a>
+          <nav>
+            <ul class="nav__links">
+              <li><a href="/">Home</a></li>
+              <li><a href="shop">Shop</a></li>
+          </ul>
+          </nav>
+          <a class="navbutton" href="login"><button>My profile</button></a>
+      </header>
+      <main>
+      {% block content %}
+      {% endblock %}
+      </main>
+      <!--
+      <footer class="footer">
+
+        <div class="container">
+
+          <div class="footer-row">
+
+            <div class="footer-links">
+
+              <h4>Comany</h4>
+              <ul>
+                <li><a herf="#">About Us</a></li>
+                <li><a herf="#">Privaciti</a></li>
+              </ul>
+
+            </div>
+            <div class="footer-links">
+
+              <h4>Help</h4>
+              <ul>
+                <li><a herf="#">Questions</a></li>
+                <li><a herf="#">How to buy</a></li>
+              </ul>
+
+            </div>
+
+          </div>
+
+        </div>
+      </footer>
+    -->
+    </body>
+
+</html>

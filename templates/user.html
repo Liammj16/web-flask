@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{%block title%}Home page{% endblock %}
+{% block content %} 
+
+      <link rel="stylesheet" href="\static\stylesuser.css">
+    </head>
+    <body>
+      <article>
+        <div>
+          <img src="" alt="Foto de perfil" class="avatar">
+          <h2>Hi, {{user}} PW: {{pswrd}}</h2>
+          <p class="ubicacion">Welcome to IndieNest </p>
+        </div>
+        <form action="#"method="post">
+            <p>If you want more information put your email there</p>
+            <input class="controls" type="email" name="email" placeholder="Ingrese su email" value="{{email if email}}">
+            <button class="botons" type="submit" value="submint">Send</button>
+        </form>
+      </article> 
+      
+    </body>
+    </html>
+
+
+
+{% endblock %}

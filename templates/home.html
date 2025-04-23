@@ -1,0 +1,78 @@
+{% extends "base.html" %}    
+{% block title %}Shop{% endblock %}
+{% block content %}
+
+<body>
+    <link rel="stylesheet" href="\static\styleshome.css">
+    
+        <section id="productos">
+            <h2>Productos</h2>
+
+        </section>
+        <!--slideshow--> 
+        <h2>Mas populares</h2>
+        <div class="carousel-container">
+            <div class="carousel-slide">
+                <div class="slide">
+                    <h3>Survival</h3>
+                    <img src="\static\images\survival.png" alt="Imagen 1">
+                </div>
+                <div class="slide">
+                    <h3>Story</h3>
+                    <img src="\static\images\story.png" alt="Imagen 2">
+                </div>
+                <div class="slide">
+                    <h3>Diapositiva 3</h3>
+                    <img src="https://via.placeholder.com/300/0000FF/FFFFFF?Text=Imagen+3" alt="Imagen 3">
+                </div>
+            </div>
+            <div class="carousel-nav-arrows">
+                <button class="nav-arrow" onclick="prevSlide()">&#10094;</button>
+                <button class="nav-arrow" onclick="nextSlide()">&#10095;</button>
+            </div>
+            <div class="carousel-dots">
+                <span class="dot active" onclick="goToSlide(0)"></span>
+                <span class="dot" onclick="goToSlide(1)"></span>
+                <span class="dot" onclick="goToSlide(2)"></span>
+            </div>
+        </div>
+        
+        <section id="ofertas">
+            <h2>Ofertas Especiales</h2>
+            <p>¡No te pierdas nuestras ofertas exclusivas por tiempo limitado!</p>
+        </section>  
+        <script>
+            const carouselSlide = document.querySelector('.carousel-slide');
+            const slides = document.querySelectorAll('.slide');
+            const dots = document.querySelectorAll('.dot');
+            let currentIndex = 0;
+    
+            function goToSlide(index) {
+                if (index < 0 || index >= slides.length) return;
+                carouselSlide.style.transform = `translateX(-${index * 100}%)`;
+                updateDots(index);
+                currentIndex = index;
+            }
+    
+            function updateDots(index) {
+                dots.forEach((dot, i) => {
+                    dot.classList.toggle('active', i === index);
+                });
+            }
+    
+            function nextSlide() {
+                currentIndex = (currentIndex + 1) % slides.length;
+                goToSlide(currentIndex);
+            }
+    
+            function prevSlide() {
+                currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+                goToSlide(currentIndex);
+            }
+    
+            // Inicializar el carrusel
+            goToSlide(0);
+        </script>
+    </body>
+    {% endblock %}
+  </html>

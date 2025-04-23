@@ -1,0 +1,89 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    
+
+}
+
+body {
+    background: linear-gradient(to right, 
+        #0851a0, #6972f0, #2F3F80, #161569, 
+        #6c8ad4, #30c2f3, #679fe9);
+    background-size: 500%;
+    animation: faminado 30s infinite;
+    min-height: 100vh;
+}
+
+@keyframes faminado {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+li, a, button{
+    border: none;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: #42accf;
+    background-color: transparent;
+    text-decoration: none;
+
+}
+
+
+header {
+    background-color: #24303c;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 7px 5%;
+}
+
+.logo {
+
+    background-color: transparent;
+    cursor: pointer;
+    margin-right: auto;
+}
+
+.nav__links{
+    list-style: none;
+}
+
+.nav__links li{
+    display: inline-block;
+    padding: 0px 20px;
+    background-color: transparent;
+}
+
+.nav__links li a {
+    transition:  all 0.3s ease 0s;
+}
+
+.nav__links li a:hover {
+    color: #ffffff;
+}
+
+.navbutton {
+    padding: 9px 25px;
+    background-color: rgb(10, 94, 115);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+
+.navbutton:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    background-color: rgba(0,136,169,0.8);
+}
+
