@@ -43,6 +43,10 @@ def view():
 def shop():
     return render_template("shop.html")
 
+@app.route("/aboutus")
+def aboutus():
+    return render_template("aboutus.html")
+
 #Funcionament de la pagina login (una vegada que has fet el login es quedara iniciat el temps que dicti el parametre: app.permanent_session_lifetime)
 @app.route("/login", methods=["POST", "GET"])
 def login():
