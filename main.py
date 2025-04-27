@@ -42,12 +42,36 @@ def view():
 @app.route("/shop")
 def shop():
     return render_template("shop.html")
+@app.route("/game1")
+def game1():
+    return render_template("game1.html")
 
 @app.route("/aboutus")
 def aboutus():
     return render_template("aboutus.html")
 
 #Funcionament de la pagina login (una vegada que has fet el login es quedara iniciat el temps que dicti el parametre: app.permanent_session_lifetime)
+@app.route("/register", methods=["POST", "GET"])
+def register():
+    if request.method == "POST":
+        user = request.form["nm"]
+        pswrd = request.form["pw"]
+        session["user"] = user
+        session["pswrd"] = pswrd
+
+        found_user = users.query.filter_by(name=user).first()
+        if found_user:
+            flash("User already exists!")
+            return redirect(url_for("login"))
+        else:
+            usr = users(user, "")
+            db.session.add(usr)
+            db.session.commit()
+            flash("User created successfully!")
+            return redirect(url_for("login"))
+    else:
+        return render_template("register.html")
+
 @app.route("/login", methods=["POST", "GET"])
 def login():
     
