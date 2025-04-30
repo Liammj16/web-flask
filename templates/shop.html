@@ -5,145 +5,96 @@
 <body>
     <link rel="stylesheet" href="\static\stylesshop.css">  
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-        <section id="productos">
-            <h2>Productos</h2>
-            <div class="productos">
-                <div class="producto" >
-                    <img src="\static\images\Hollowknight.png" alt="Producto 1">
-                    <h3>Hollow knight</h3>
-                    <p>19,99€</p>
-                    <button herf="game1">Buy It</button>
-                </div>
-                <div class="producto">
-                    <img src="\static\images\Undertale.png" alt="Producto 2">
-                    <h3>Undertale</h3>
-                    <p>3,99€</p>
-                    <button>Buy It</button>
-                </div>
-                <div class="producto">
-                    <img src="\static\images\Terraria.png" alt="Producto 3">
-                    <h3>Terraria</h3>
-                    <p>8,99€</p>
-                    <button>Buy It</button>
-                </div>
-                <div class="producto">
-                    <img src="\static\images\Hollowknight.png" alt="Producto 1">
-                    <h3>Hollow knight</h3>
-                    <p>19,99€</p>
-                    <button>Buy It</button>
-                </div>
-                
-                <div class="producto">
-                    <img src="\static\images\Undertale.png" alt="Producto 2">
-                    <h3>Undertale</h3>
-                    <p>3,99€</p>
-                    <button>Buy It</button>
-                </div>
-                <div class="producto">
-                    <img src="\static\images\Terraria.png" alt="Producto 3">
-                    <h3>Terraria</h3>
-                    <p>8,99€</p>
-                    <button>Buy It</button>
-                </div>
-                <div class="producto">
-                    <img src="\static\images\Hollowknight.png" alt="Producto 1">
-                    <h3>Hollow knight</h3>
-                    <p>19,99€</p>
-                    <button>Buy It</button>
-                </div>
-                <div class="producto">
-                    <img src="\static\images\Undertale.png" alt="Producto 2">
-                    <h3>Undertale</h3>
-                    <p>3,99€</p>
-                    <button>Buy It</button>
-                </div>
-                <div class="producto">
-                    <img src="\static\images\Terraria.png" alt="Producto 3">
-                    <h3>Terraria</h3>
-                    <p>8,99€</p>
-                    <button>Buy It</button>
-                </div>
-                <div class="producto">
-                    <img src="\static\images\Hollowknight.png" alt="Producto 1">
-                    <h3>Hollow knight</h3>
-                    <p>19,99€</p>
-                    <button>Buy It</button>
-                </div>
-                <div class="producto">
-                    <img src="\static\images\Undertale.png" alt="Producto 2">
-                    <h3>Undertale</h3>
-                    <p>3,99€</p>
-                    <button>Buy It</button>
-                </div>
-                <div class="producto">
-                    <img src="\static\images\Terraria.png" alt="Producto 3">
-                    <h3>Terraria</h3>
-                    <p>8,99€</p>
-                    <button>Buy It</button>
-                </div>
-            </div>
-        </section>
-        <h2>Games</h2>
-        <div class="carousel-container">
-            <div class="carousel-slide">
-                <div class="slide">
-                    <h3>Terraria</h3>
-                    <img src="\static\images\survival.png" alt="Imagen 1">
-                </div>
-                <div class="slide">
-                    <h3>Undertale</h3>
-                    <img src="\static\images\story.png" alt="Imagen 2">
-                </div>
-                <div class="slide">
-                    <h3>Diapositiva 3</h3>
-                    <img src="https://via.placeholder.com/300/0000FF/FFFFFF?Text=Imagen+3" alt="Imagen 3">
-                </div>
-            </div>
-            <div class="carousel-nav-arrows">
-                <button class="nav-arrow" onclick="prevSlide()">&#10094;</button>
-                <button class="nav-arrow" onclick="nextSlide()">&#10095;</button>
-            </div>
-            <div class="carousel-dots">
-                <span class="dot active" onclick="goToSlide(0)"></span>
-                <span class="dot" onclick="goToSlide(1)"></span>
-                <span class="dot" onclick="goToSlide(2)"></span>
-            </div>
-        <section id="ofertas">
-            <h2>Ofertas</h2>
-            <p>¡No te pierdas nuestras ofertas exclusivas por tiempo limitado!</p>
-        </section>  
-        <script>
-            const carouselSlide = document.querySelector('.carousel-slide');
-            const slides = document.querySelectorAll('.slide');
-            const dots = document.querySelectorAll('.dot');
-            let currentIndex = 0;
-    
-            function goToSlide(index) {
-                if (index < 0 || index >= slides.length) return;
-                carouselSlide.style.transform = `translateX(-${index * 100}%)`;
-                updateDots(index);
-                currentIndex = index;
-            }
-    
-            function updateDots(index) {
-                dots.forEach((dot, i) => {
-                    dot.classList.toggle('active', i === index);
-                });
-            }
-    
-            function nextSlide() {
-                currentIndex = (currentIndex + 1) % slides.length;
-                goToSlide(currentIndex);
-            }
-    
-            function prevSlide() {
-                currentIndex = (currentIndex - 1 + slides.length) % slides.length;
-                goToSlide(currentIndex);
-            }
-    
-            // Inicializar el carrusel
-            goToSlide(0);
-        </script>
-    </body>
+        
+           <!--slideshow--> 
+           <h2>Mas populares</h2>
+           <div class="carousel-container">
+               <div class="carousel-slide">
+                   <div class="slide">
+                       <h3>Survival</h3>
+                       <img src="\static\images\survival.png" alt="Imagen 1">
+                   </div>
+                   <div class="slide">
+                       <h3>Story</h3>
+                       <img src="\static\images\story.png" alt="Imagen 2">
+                   </div>
+                   <div class="slide">
+                       <h3>Diapositiva 3</h3>
+                       <img src="https://via.placeholder.com/300/0000FF/FFFFFF?Text=Imagen+3" alt="Imagen 3">
+                   </div>
+               </div>
+               <div class="carousel-nav-arrows">
+                   <button class="nav-arrow" onclick="prevSlide()">&#10094;</button>
+                   <button class="nav-arrow" onclick="nextSlide()">&#10095;</button>
+               </div>
+               <div class="carousel-dots">
+                   <span class="dot active" onclick="goToSlide(0)"></span>
+                   <span class="dot" onclick="goToSlide(1)"></span>
+                   <span class="dot" onclick="goToSlide(2)"></span>
+               </div>
+           </div>
+           <h2>Productos</h2>
+           <div class="productos">
+               <div class="producto">
+                   <img src="\static\images\Hollowknight.png" alt="Producto 1">
+                   <h3>Hollow knight</h3>
+                   <p>19,99€</p>
+                   <button><a href="game1">Buy It</a></button>
+               </div>
+               <div class="producto">
+                   <img src="\static\images\Undertale.png" alt="Producto 2">
+                   <h3>Undertale</h3>
+                   <p>3,99€</p>
+                   <button>Buy It</button>
+               </div>
+               <div class="producto">
+                   <img src="\static\images\Terraria.png" alt="Producto 3">
+                   <h3>Terraria</h3>
+                   <p>8,99€</p>
+                   <button>Buy It</button>
+               </div>
+               <div class="producto">
+                   <img src="\static\images\cuphead.png" alt="Producto 1">
+                   <h3>Hollow knight</h3>
+                   <p>19,99€</p>
+                   <button>Buy It</button>
+               </div>
+           <section id="ofertas">
+               <h2>Ofertas Especiales</h2>
+               <p>¡No te pierdas nuestras ofertas exclusivas por tiempo limitado!</p>
+           </section>  
+           <script>
+               const carouselSlide = document.querySelector('.carousel-slide');
+               const slides = document.querySelectorAll('.slide');
+               const dots = document.querySelectorAll('.dot');
+               let currentIndex = 0;
+       
+               function goToSlide(index) {
+                   if (index < 0 || index >= slides.length) return;
+                   carouselSlide.style.transform = `translateX(-${index * 100}%)`;
+                   updateDots(index);
+                   currentIndex = index;
+               }
+       
+               function updateDots(index) {
+                   dots.forEach((dot, i) => {
+                       dot.classList.toggle('active', i === index);
+                   });
+               }
+       
+               function nextSlide() {
+                   currentIndex = (currentIndex + 1) % slides.length;
+                   goToSlide(currentIndex);
+               }
+       
+               function prevSlide() {
+                   currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+                   goToSlide(currentIndex);
+               }
+       
+               // Inicializar el carrusel
+               goToSlide(0);
+           </script>
+       </body>
     {% endblock %}
   </html>

@@ -42,6 +42,7 @@ def view():
 @app.route("/shop")
 def shop():
     return render_template("shop.html")
+#Muestra el juego de ejemplo
 @app.route("/game1")
 def game1():
     return render_template("game1.html")

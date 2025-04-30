@@ -92,13 +92,14 @@ footer {
 }
 
 .carousel-container {
-    width: 100%; /* Ajusta el ancho del carrusel */
+    width: 80%; /* Ajusta el ancho del carrusel */
     max-width: 1200px; /* Ancho máximo opcional */
     overflow: hidden;
     position: relative;
     color: white;
     border-radius: 8px;
     background-color: transparent;
+    margin: 0 auto;
 }
 
 .carousel-slide {
